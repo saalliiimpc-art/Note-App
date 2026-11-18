@@ -1,0 +1,46 @@
+.notes-area {
+    padding: 25px;
+    width: 100%;
+}
+
+.notes-heading {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.search-input {
+    width: 300px;
+    padding: 12px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    outline: none;
+    font-size: 15px;
+}
+
+.search-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.create-btn {
+    padding: 12px 20px;
+    background-color: wheat;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.create-btn:hover {
+    background-color: burlywood;
+}

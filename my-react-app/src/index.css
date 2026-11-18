@@ -1,0 +1,79 @@
+.sidebar {
+    width: 140px;
+    height: 100%;
+    background-color: wheat;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+.sidebar button {
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+.sidebar button:hover {
+    background-color: white;
+    color: wheat;
+}
+.app-layout{
+
+    color: blue;
+    display: flex;
+    
+
+
+}
+.main-content{
+    flex: auto;
+}
+.main-content h1{
+    text-align: center;
+}
+
+
+/* ------------------------note-------------- */
+
+.note-form {
+    width: 350px;
+    padding: 25px;
+    background-color: wheat;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.note-form h2 {
+    text-align: center;
+}
+
+.note-title,
+.note-content,
+.note-color {
+    padding: 12px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.note-content {
+    height: 120px;
+}
+
+.save-btn {
+    padding: 12px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+/*  */
