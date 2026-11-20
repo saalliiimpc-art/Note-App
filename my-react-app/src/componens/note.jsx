@@ -56,7 +56,7 @@ export default function Note({onSave}) {
                     <option value="Pink">Pink</option>
                 </select>
                 <button className="save-btn">SAVE</button>
-                {error && <h2 className="error">{error}</h2>}
+                {error && <h3 className="error">{error}</h3>}
             </form>
         </div>
     )

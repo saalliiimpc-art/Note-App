@@ -5,11 +5,12 @@
     background-color: #fffaf0;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    border : 2px solid black
 }
 
 .note-form h2 {
     text-align: center;
-    color: #5b4b8a;
+    color: black;
     margin-bottom: 25px;
     font-size: 25px;
 }
@@ -19,7 +20,7 @@
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #d8cde8;
+    border: 2px solid black;
     border-radius: 8px;
     font-size: 15px;
     box-sizing: border-box;
@@ -27,7 +28,7 @@
 }
 
 .note-title:focus {
-    border-color: #9575cd;
+    border-color: red;
     box-shadow: 0 0 5px rgba(149, 117, 205, 0.3);
 }
 
@@ -37,7 +38,7 @@
     height: 130px;
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #d8cde8;
+    border: 2px solid black;
     border-radius: 8px;
     font-size: 15px;
     resize: vertical;
@@ -47,7 +48,7 @@
 }
 
 .note-form textarea:focus {
-    border-color: #9575cd;
+    border-color: red;
 }
 
 /* Color selection */
@@ -55,20 +56,22 @@
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
-    border: 1px solid #d8cde8;
+    border: 2px solid black;
     border-radius: 8px;
-    background-color: white;
     font-size: 15px;
     cursor: pointer;
+}
+.note-color:focus{
+     border-color: red;
 }
 
 /* Save button */
 .save-btn {
     width: 100%;
     padding: 12px;
-    background-color: #9575cd;
-    color: white;
-    border: none;
+    background-color:white;
+    color: black;
+    border: 2px solid black;
     border-radius: 8px;
     font-size: 16px;
     font-weight: bold;
@@ -77,8 +80,10 @@
 }
 
 .save-btn:hover {
-    background-color: #7655ad;
+    background-color: black;
+    color: white;
     transform: translateY(-2px);
+    border: 2px solid white;
 }
 
 /* Error message */

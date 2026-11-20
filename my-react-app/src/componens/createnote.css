@@ -1,22 +1,17 @@
+/* Main Notes Area */
 .notes-area {
-    
     padding: 20px;
     margin: 40px;
+    border-radius: 15px;
 }
 
-.notes-heading {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* Search box */
+/* Search Box */
 .search-box {
     display: flex;
     align-items: center;
     gap: 10px;
     width: 350px;
-    border: 2px solid black ;
+    border: 2px solid black;
     border-radius: 45px;
 }
 
@@ -27,37 +22,104 @@
     margin-left: 30px;
     font-size: 15px;
     outline: none;
+    background: transparent;
+    
 }
-
-
 
 .search-btn {
     padding: 12px 15px;
     border: none;
-    border-radius: 8px;
-    
+   
     cursor: pointer;
     font-size: 16px;
     background: transparent;
 }
 
-
-
-/* Create Note button */
+/* Create Note Button */
 .create-btn {
     margin-top: 20px;
     margin-left: 120px;
     padding: 12px 20px;
-    border: 2px solid black ;
-    border-radius: 45px;
+    border: 2px solid black;
+    border-radius: 15px;
     font-size: 16px;
     cursor: pointer;
+    background-color:red;
+    transition: 0.3s;
+    color:white
 }
 
 .create-btn:hover {
-    background-color: blue;
-    color: white;
-   
-    
-    
+    background-color:#fff3c4 ;
+    color: black;
+}
+
+/* Notes Heading */
+.notes-heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* Notes Container */
+.notes-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Individual Note Box */
+.single-note {
+    width: 220px;
+    min-height: 100px;
+    height: auto;
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+
+    background-color: #fff3c4;
+    border: 2px solid black;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
+.single-note:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.single-note:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.single-note h2 {
+    font-size: 20px;
+    color: #333;
+}
+.close-btn {
+    padding: 8px 20px;
+    background-color: white;
+    color: red;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    background-color: black;
+    color:red ;
+    border: 2px solid red ;
 }

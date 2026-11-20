@@ -5,6 +5,8 @@ import Note from "./note"
 export default function Notearea({allnotes,setAllnotes}){
 
     const[shownote,setShownote]=useState(false)
+    const [selectedNote, setSelectedNote] = useState(null);
+
 
     function handleSave(newNote){
         setAllnotes([...allnotes,newNote])
@@ -13,19 +15,6 @@ export default function Notearea({allnotes,setAllnotes}){
     
     return(
         <div className="notes-area">
-            <h3 className="notes-heading">Notes:-</h3>
-
-            <div>
-                {allnotes.map((n,index)=>(
-                    <div key={index} className="single-note">
-                        <h2>{n.title}</h2>
-                        <h3>{n.content}</h3>
-                        <h4>{n.color}</h4>
-                    </div>
-                ))}
-
-            </div>
-
             <div className="search-box">
                 <input
                     className="search-input"
@@ -34,12 +23,33 @@ export default function Notearea({allnotes,setAllnotes}){
                 />
                 <button className="search-btn">🔍</button>
             </div>
-            <br></br>
             <button
                 className="create-btn"
-                onClick={()=>setShownote(true)}
-            >Create Note</button>
+                onClick={() => setShownote(true)}>
+            Create Note</button>
+
+
             {shownote && <Note onSave={handleSave} />}
+            
+            <h3 className="notes-heading">Notes:-</h3>
+            <div className="notes-list">
+                {allnotes.map((n, index) => (
+                    <div key={index} className="single-note">
+                        <h2 onClick={() => setSelectedNote(n)}>{n.title}</h2>
+
+                        {selectedNote === n && (
+                            <div>
+                                <h3>{n.content}</h3>
+                                <h4>{n.color}</h4>
+                                <button 
+                                    onClick={() => setSelectedNote(null)}
+                                    className="close-btn">
+                                Close</button>
+                            </div>
+                        )}
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }

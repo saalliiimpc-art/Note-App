@@ -1,10 +1,19 @@
 
 import Sidebar from "./componens/Sidebar";
 import Notearea from "./componens/createnote";
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import "./App.css";
+
 
 function App() {
-  const[allnotes,setAllnotes]=useState([])
+  const [allnotes, setAllnotes] = useState(() => {
+    const savedNotes = localStorage.getItem("notes");
+    return savedNotes ? JSON.parse(savedNotes) : [];
+  });
+  useEffect(()=>{
+    localStorage.setItem("notes", JSON.stringify(allnotes));
+  }, [allnotes]);
+
 
  
 
