@@ -7,6 +7,7 @@ export default function Note({onSave}) {
     const[color,setColor]=useState("Yellow");
     const[error,setError]=useState("");
     
+    
     function handle(e){
         e.preventDefault();
         if(title===""){
@@ -23,6 +24,8 @@ export default function Note({onSave}) {
             };
             onSave(newNote)
         }
+        
+
        
     }
     

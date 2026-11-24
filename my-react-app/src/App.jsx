@@ -28,7 +28,7 @@ function App() {
             allnotes={allnotes}
             setAllnotes={setAllnotes}
           />
-        </div>
+        </div> 
       </div>
     </div>
     </>

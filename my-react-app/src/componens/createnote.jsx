@@ -12,6 +12,11 @@ export default function Notearea({allnotes,setAllnotes}){
         setAllnotes([...allnotes,newNote])
         setShownote(false)
     }
+    function deletenote(index){
+        let a=[...allnotes]
+        a.splice(index,1)
+        setAllnotes(a)
+    }
     
     return(
         <div className="notes-area">
@@ -32,7 +37,7 @@ export default function Notearea({allnotes,setAllnotes}){
             {shownote && <Note onSave={handleSave} />}
             
             <h3 className="notes-heading">Notes:-</h3>
-            <div className="notes-list">
+            <div className="notes-list" >
                 {allnotes.map((n, index) => (
                     <div key={index} className="single-note">
                         <h2 onClick={() => setSelectedNote(n)}>{n.title}</h2>
@@ -44,7 +49,13 @@ export default function Notearea({allnotes,setAllnotes}){
                                 <button 
                                     onClick={() => setSelectedNote(null)}
                                     className="close-btn">
-                                Close</button>
+                                    Close
+                                </button>
+                                <button 
+                                    onClick={deletenote}
+                                    className="delete-button"
+                                    >Delete
+                                </button>
                             </div>
                         )}
                     </div>
